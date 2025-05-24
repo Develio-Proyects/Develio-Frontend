@@ -1,0 +1,45 @@
+#queOfrecemos{
+    margin-top: -3rem;
+    padding: 4rem 1rem;
+    border-radius: 40px 40px 0 0;
+    background-color: var(--secundary-background);
+    .QO-titles{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        .title, .text{
+            text-align: center;
+            max-width: 450px;
+        }
+    }
+    .qo-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        padding: 1rem 0;
+        max-width: 1200px;
+        margin: auto;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 1024px){
+    #queOfrecemos{
+        .QO-titles{
+            margin-bottom: 4rem;
+        }
+        .qo-container{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-evenly;
+            .swiper-wrapper{
+                width: 400px;
+                margin: 0;
+            }
+        }
+    }
+}

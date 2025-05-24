@@ -1,0 +1,72 @@
+.agendar-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--darker-secundary);
+    .agendar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+        background-color: var(--darker-secundary);
+        .agendar-titles{
+            text-align: center;
+            margin-bottom: 2rem;
+            & > *{
+                color: var(--text);
+            }            
+        }
+        button{
+            width: 220px;
+        }
+    }
+}
+.modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 1rem);
+    max-width: 320px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 5px;
+    background-color: var(--text);
+    .modal-agendar-title{
+        margin: 2rem 0 1rem;
+        text-align: center;
+        color: var(--terciary);
+    }
+    .css-fqx8sh-MuiDateCalendar-root, .MuiDateCalendar-root{
+        width: calc(100% - 1.5rem) !important;
+        height: auto;
+        margin: 0;
+    }
+}
+
+@media (min-width: 768px){
+    .agendar-container{
+        position: relative;
+        height: 0;
+        background-color: transparent;
+        .agendar{
+            width: 100%;
+            max-width: 1024px;
+            flex-direction: row;
+            justify-content: space-around;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            padding: 2rem 4rem;
+            border-radius: 5px;
+            .agendar-titles{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .modal{
+        max-width: 400px;
+    }
+}

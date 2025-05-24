@@ -1,0 +1,83 @@
+#inicio{
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+    background: radial-gradient(circle, rgba(9,31,53,1) 0%, rgba(5,19,34,1) 25%, rgba(3,12,23,1) 59%);
+    background-image: url('/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    .hero-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 6rem;
+        .hero-title{
+            max-width: clamp(300px, 90vw, 600px);
+            font-size: clamp(32px, 10vw, 68px);
+            font-weight: 500;
+            color: var(--text);
+            text-align: center;
+            span{
+                color: var(--primary);
+            }
+        }
+        .hero-buttons{
+            display: flex;
+            flex-direction: column;
+            column-gap: 2rem;
+            margin: 4rem 0;
+        }
+    }
+    .directional-arrow{
+        display: flex;
+        justify-content: center;
+        align-self: end;
+        margin-bottom: 2rem;
+        svg{
+            animation: upAndDown 1.5s infinite ease-in-out;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.144);
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    #inicio{
+        justify-content: center;
+        height: 700px;
+        .hero-container{
+            margin-top: 4rem;
+            padding: 2rem;
+            align-items: start;
+            .hero-title{
+                text-align: start;
+                span{
+                    color: var(--primary);
+                }
+            }
+            .hero-buttons{
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+@keyframes upAndDown{
+    0% { 
+        transform: translateY(0); 
+        color: rgba(255, 255, 255, 0.144);
+    }
+    50% { 
+        transform: translateY(20px); 
+        color: rgba(255, 255, 255, 0.692);
+    }
+    100% { 
+        transform: translateY(0); 
+        color: rgba(255, 255, 255, 0.144);
+    }
+}

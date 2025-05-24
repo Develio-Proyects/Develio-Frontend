@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: tobiasriccone/frontend-develio:latest
+    container_name: frontend
+    restart: always
+    environment:
+      VITE_PUBLIC_KEY: ${VITE_PUBLIC_KEY}
+      VITE_SERVICE_ID: ${VITE_SERVICE_ID}
+      VITE_TEMPLATE_ID: ${VITE_TEMPLATE_ID}
+
+  nginx-manager:
+    image: 'jc21/nginx-proxy-manager:latest'
+    container_name: nginx-manager
+    restart: always
+    ports:
+      - "81:81"
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/data:/data
+      - ./nginx/letsencrypt:/etc/letsencrypt

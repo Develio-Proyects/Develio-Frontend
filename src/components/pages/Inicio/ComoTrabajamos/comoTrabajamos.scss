@@ -1,0 +1,47 @@
+#comoTrabajamos{
+    background-image: url('/steps.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 6rem 1rem;
+    .ct-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .ct-titles{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 4rem;
+            & > * {
+                color: var(--text);
+                text-align: center;
+            }
+            p{
+                max-width: 450px;
+            }
+        }
+        .ct-content{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto auto;
+            row-gap: 3rem;
+            column-gap: 2rem;
+            width: 100%;
+            max-width: 768px;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    #comoTrabajamos{
+        padding: 12rem 1rem 10rem;
+        .ct-container{
+            .ct-content{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-template-rows: auto auto;
+            }
+        }
+    }
+}
