@@ -3,7 +3,15 @@ Para que el proceso siempre ocupe el mismo puerto, matarlo con q + enter. Si no 
 
 # Docker
 Comandos para generar la imagen que utiliza el server
-- docker login
-- npm run build
-- docker build -t tobiasriccone/frontend-develio:latest .
-- docker push tobiasriccone/frontend-develio:latest
+```bash
+docker login
+```
+```bash
+npm run build
+```
+```bash
+docker build -t tobiasriccone/frontend-develio:latest .
+```
+```bash
+docker push tobiasriccone/frontend-develio:latest
+```
