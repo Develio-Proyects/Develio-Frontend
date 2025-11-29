@@ -37,7 +37,7 @@ const Footer = () => {
                     </div> */}
                     <div className="footer-red">
                         <MailOutlineIcon />
-                        <a href="mailto:contacto@develio.dev">contacto@develio.email</a>
+                        <a href="mailto:contacto@develio.dev">contacto@develio.dev</a>
                     </div>
                 </div>
                 <p className='copytight'>Copryright © 2025 <span>Develio</span> - Desarrollo Web y Software</p>
