@@ -1,5 +1,5 @@
 import './contacto.scss';
-import { Button, Fade, Slide, Snackbar, TextField } from "@mui/material"
+import { Button, Slide, Snackbar, TextField } from "@mui/material"
 import { useFormik } from "formik";
 import { useRef, useState } from "react";
 import * as Yup from 'yup';
@@ -9,7 +9,7 @@ const Contacto = () => {
     const [open, setOpen] = useState(false);
     const form = useRef()
     
-    const {handleSubmit, handleChange, handleBlur, touched, values, setValues, errors, isSubmitting} = useFormik({
+    const {handleSubmit, handleChange, handleBlur, touched, values, errors} = useFormik({
         initialValues: {
             name: '',
             email: '',
