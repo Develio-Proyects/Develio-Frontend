@@ -1,23 +1,39 @@
-# TIP
-Para que el proceso siempre ocupe el mismo puerto, matarlo con q + enter. Si no se hace de esta manera el proceso ocupara el puerto hasta reiniciar la PC. Se necesita ocupar siempre el mismo puerto ya que el backend solo le da permiso a lo que viene de localhost:81.
+# Develio.dev — Landing Page
 
-# Environment
-VITE_PUBLIC_KEY=  
-VITE_SERVICE_ID=  
-VITE_TEMPLATE_ID=  
-Estas variables tienen que estar en un .env al momento de construir la imagen docker
+Landing page oficial de [Develio.dev](https://develio.dev), hosteada en **GitHub Pages**.
 
-# Docker
-Comandos para generar la imagen que utiliza el server
-```bash
-docker login
+Construida con React + Vite.
+
+---
+
+## Variables de entorno
+
+Crear un archivo `.env` en la raíz del proyecto con las siguientes variables antes de hacer el build:
+
+```env
+VITE_PUBLIC_KEY=
+VITE_SERVICE_ID=
+VITE_TEMPLATE_ID=
 ```
+
+Los valores de estas variables están documentados en el Drive de Develio.
+
+---
+
+## Deploy en GitHub Pages
+
+El deploy se realiza con el script `deploy` del `package.json`, que primero ejecuta el build y luego publica el contenido de `dist/` en GitHub Pages.
+
+### Requisitos previos
+
+1. Instalar [GitHub CLI](https://cli.github.com/)
+2. Autenticarse con el usuario que tiene acceso a la organización de Develio:
+   ```bash
+   gh auth login
+   ```
+
+### Ejecutar el deploy
+
 ```bash
-npm run build
-```
-```bash
-docker build --platform linux/amd64 -t tobiasriccone/frontend-develio:latest .
-```
-```bash
-docker push tobiasriccone/frontend-develio:latest
+npm run deploy
 ```
